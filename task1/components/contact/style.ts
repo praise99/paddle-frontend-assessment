@@ -9,13 +9,30 @@ const ContactWrapper = styled.div`
   padding: 30px;
 
   .title {
-    margin-top: 30px;
+    margin-top: 70px;
     font-size: 30px;
     text-align: center;
     margin-bottom: 40px;
   }
 `;
 const Form = styled.form`
+  .name-box {
+    position: relative;
+  }
+  .blue-circle {
+    width: 150px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    right: 50px;
+    margin-top: -25px;
+    background: transparent
+      linear-gradient(180deg, #1f3568 0%, transparent 100%) 0% 0% no-repeat
+      padding-box;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 150px 150px 0 0;
+  }
   .input {
     display: flex;
     flex-direction: column;
@@ -44,19 +61,9 @@ const Form = styled.form`
     height: 150px;
     padding-top: 20px;
   }
-  button {
+  .button {
     margin-top: 10px;
     margin-bottom: 30px;
-    background: #271ac1 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 10px #09090991;
-    width: 200px;
-    height: 54px;
-    border-radius: 30px;
-    font-size: 14px;
-    color: #ffffff;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 2px solid #271ac1;
   }
 `;
 export { ContactWrapper, Form };

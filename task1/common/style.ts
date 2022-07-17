@@ -67,6 +67,24 @@ const TextLittle400 = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.text14};
   color: ${({ theme }) => theme.colors.white};
 `;
+const TextLittle500 = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.text16};
+  color: ${({ theme }) => theme.colors.white};
+`;
+const Button = styled.button`
+  background: #271ac1 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #09090991;
+  width: 200px;
+  height: 54px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #271ac1;
+`;
 export {
   TextBold,
   TextMedium,
@@ -78,4 +96,6 @@ export {
   TextSmall500,
   TextLittle400,
   TextMedium40,
+  Button,
+  TextLittle500,
 };

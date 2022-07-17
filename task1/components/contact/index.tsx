@@ -1,6 +1,6 @@
 import React from "react";
 import { ContactWrapper, Form } from "./style";
-import { TextMedium300, TextMedium40 } from "../../common/style";
+import { TextMedium300, TextMedium40, Button } from "../../common/style";
 const Contact = () => {
   return (
     <ContactWrapper>
@@ -9,15 +9,16 @@ const Contact = () => {
         <br /> but you can send us a message!
       </TextMedium40>
       <Form>
-        <div className="input">
+        <div className="blue-circle"></div>
+        <div className="input name-box">
           <label htmlFor="firstName">
-            <TextMedium300 className="name">First Name</TextMedium300>
+            <TextMedium300 className="name">First name</TextMedium300>
           </label>
           <input type="text" placeholder="Enter your first name" />
         </div>
         <div className="input">
           <label htmlFor="lastName">
-            <TextMedium300 className="name">Last Name</TextMedium300>
+            <TextMedium300 className="name">Last name</TextMedium300>
           </label>
           <input type="text" placeholder="Enter your Last name" />
         </div>
@@ -36,7 +37,7 @@ const Contact = () => {
           <textarea placeholder="Enter a topic, like  channel problem... " />
         </div>
         <div>
-          <button type="submit">Send now</button>
+          <Button type="submit" className="button">Send now</Button>
         </div>
       </Form>
     </ContactWrapper>

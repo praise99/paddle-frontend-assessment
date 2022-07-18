@@ -236,9 +236,9 @@ const Circle = styled.div`
     top: 10%;
     left: 50%;
     transform: translate(-50%, -10%);
-    height: 900px;
+    height: 490px;
     width: 85%;
-    border-radius: 1800px 1800px 0 0;
+    border-radius: 3800px 3800px 0 0;
     background: #201537;
     border: 1px solid #625960;
     @media screen and (max-width: 1000px) {

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 const TextBold = styled.h1`
   font-family: ${({ theme }) => theme.fontFamily.poppins};
-  font-size: ${({ theme }) => theme.fontSize.text62};
+  font-size: ${({ theme }) => theme.fontSize.text47};
   color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
-  line-height: 84px;
+  line-height: 62px;
   letter-spacing: 0px;
 `;
 const TextMedium = styled.h1`

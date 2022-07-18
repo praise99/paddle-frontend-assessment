@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Wrapper, Header, Cards, Card, Form, Circle } from "./style";
 import {
   TextBold,
@@ -12,10 +12,10 @@ import { TimeData } from "./timeData";
 import Image from "next/image";
 import Link from "next/link";
 const ComingSoon = () => {
-  const time = "7 / 24 / 54 / 11";
   return (
     <Wrapper>
       <Header>
+        <div className="left-box"></div>
         <TextBold className="title">
           something awesome is
           <br /> coming soon
@@ -25,11 +25,12 @@ const ComingSoon = () => {
           track, automate <span>and</span>
           <br /> optimize<span>your campaigns</span>
         </TextMedium300>
+        <div className="right-box"></div>
         <Cards>
           {TimeData?.map((item) => {
             return (
               <Card key={item.key}>
-                <TextMedium>{item.value}</TextMedium>
+                <TextMedium className="time-title">{item.value}</TextMedium>
                 <TextMedium400 className="time">{item.label}</TextMedium400>
               </Card>
             );
@@ -62,6 +63,7 @@ const ComingSoon = () => {
         </Form>
       </Header>
       <Circle>
+        <div className="bottom-box"></div>
         <div className="circle">
           <div className="icons flex">
             <div className="icon-links">

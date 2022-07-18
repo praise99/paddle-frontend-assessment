@@ -40,7 +40,7 @@ const About = () => {
             <div className="square"></div>
             <div className="flex about-line">
               <div className="line"></div>
-              <TextMedium500 onClick={() => setIsOpen(true)}>
+              <TextMedium500>
                 About us
               </TextMedium500>
             </div>

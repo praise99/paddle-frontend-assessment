@@ -12,6 +12,9 @@ const Nav = styled.nav`
   padding: 40px 70px;
   color: black;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  @media screen and (max-width: 768px) {
+    padding: 40px 20px;
+  }
   .brand-name {
     text-decoration: none;
     color: black;
@@ -35,6 +38,7 @@ const Nav = styled.nav`
         height: calc(100vh - 77px);
         background-color: white;
         border-top: 1px solid black;
+        z-index: 10000;
         display: none;
       }
     }
@@ -101,6 +105,10 @@ const Nav = styled.nav`
   }
   .button {
     width: 165px;
+    font-size: 14px;
+  }
+  .nav-links {
+    font-size: 13px;
   }
 `;
 export { Nav };

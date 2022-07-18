@@ -88,9 +88,11 @@ const ComingSoon = () => {
                 <Text400 className="links-pages">Terms of services</Text400>
               </a>
             </Link>
-            <Link href="privacy-policy">
+            <Link href="privacy-policy" className="privacy-policy">
               <a>
-                <Text400 className="links-pages">Privacy policy</Text400>
+                <Text400 className="links-pages privacy-policy">
+                  Privacy policy
+                </Text400>
               </a>
             </Link>
           </div>

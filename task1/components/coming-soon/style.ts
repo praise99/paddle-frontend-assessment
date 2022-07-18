@@ -2,7 +2,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   font-family: ${({ theme }) => theme.fontFamily.poppins};
-  height: 170vh;
+  height: auto;
   overflow: hidden;
   background-image: url("bg.svg");
   background-size: cover;
@@ -48,6 +48,9 @@ const Wrapper = styled.div`
     align-items: center;
     position: relative;
     width: 55%;
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
     }
@@ -61,6 +64,12 @@ const Wrapper = styled.div`
       font-size: 17px;
       font-weight: 300;
       padding-left: 30px;
+      @media screen and (max-width: 350px) {
+        /* font-size: 8px;
+        width: 120px; */
+        padding-left: 10px;
+        height: 50px;
+      }
     }
     button {
       background: ${({ theme }) => theme.colors.blue};
@@ -69,14 +78,24 @@ const Wrapper = styled.div`
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.white};
       font-size: 16px;
-      width: 40%;
+      width: 300px;
       border: 2px solid ${({ theme }) => theme.colors.blue};
       font-weight: 500;
       border-radius: 51px;
       position: absolute;
       right: 0px;
       @media screen and (max-width: 768px) {
+        font-size: 13px;
+        width: 200px;
+      }
+      @media screen and (max-width: 460px) {
         font-size: 10px;
+        width: 150px;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 8px;
+        width: 120px;
+        height: 50px;
       }
     }
   }
@@ -124,13 +143,20 @@ const Header = styled.header`
     text-align: center;
   }
   .title {
+    /* width: 60%; */
+    /* min-width: 700px; */
     @media screen and (max-width: 768px) {
       font-size: 32px;
+      line-height: 40px;
+    }
+    @media screen and (max-width: 460px) {
+      font-size: 22px;
       line-height: 40px;
     }
   }
   .description {
     font-size: 18px;
+    padding-top: 10px;
     @media screen and (max-width: 768px) {
       font-size: 12px;
     }
@@ -159,11 +185,20 @@ const Card = styled.div`
   @media screen and (max-width: 768px) {
     width: 80px;
   }
+  @media screen and (max-width: 460px) {
+    width: 60px;
+  }
   .time {
     padding-top: 5px;
+    @media screen and (max-width: 460px) {
+      font-size: 14px;
+    }
   }
   .time-title {
     font-size: 32px;
+    @media screen and (max-width: 460px) {
+      font-size: 24px;
+    }
   }
 `;
 const Form = styled.form`
@@ -182,16 +217,13 @@ const Circle = styled.div`
   text-align: center;
   flex-direction: column;
   position: relative;
+  height: 300px;
 
   .bottom-box {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     background-color: red;
-    /* left: 70% !important; */
-    /* align-self: flex-start; */
-    /* top: 80px; */
-    /* align-self: none; */
     background: transparent
       linear-gradient(180deg, #213c6f 0%, transparent 100%) 0% 0% no-repeat
       padding-box;
@@ -200,16 +232,18 @@ const Circle = styled.div`
     display: none;
   }
   .circle {
-    width: 90%;
-    border: 2px solid #625960;
-    height: 90%;
-    /* border-radius: 50%; */
-    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    height: 900px;
+    width: 85%;
+    border-radius: 1800px 1800px 0 0;
     background: #201537;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    border: 1px solid #625960;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
 
     .icon-links {
       margin-top: 100px;
@@ -224,16 +258,24 @@ const Circle = styled.div`
         background-color: white;
       } */
     }
+    .icons {
+      justify-content: center;
+      width: 100%;
+    }
     .service {
-      width: 30%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: 24px;
       margin-bottom: 30px;
-      @media screen and (max-width: 768px) {
-        width: 90%;
+      justify-content: center;
+      .privacy-policy {
+        margin-left: 50px;
       }
+      /* @media screen and (max-width: 768px) {
+        width: 90%;
+      } */
     }
     .links-pages {
       opacity: 0.61;

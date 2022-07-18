@@ -1,5 +1,6 @@
 import GithubContent from "../../components/github";
 import React, { useEffect } from "react";
+import { BASE_URL } from "../../services";
 const GithubPage = (props: any) => {
   return (
     <>
@@ -26,10 +27,18 @@ export const getStaticProps = async () => {
     currentDate[1] = replacedDate[0];
     return currentDate.join("-");
   };
-  const data: any = await fetch(
-    `https://api.github.com/search/repositories?q=created:>${getCurrentDate()}&sort=stars&order=desc&per_page=15`
-  ).then((response) => response.json());
-  return {
-    props: { data },
-  };
+  let url = BASE_URL + getCurrentDate() + "&sort=stars&order=desc&per_page=15";
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    if (data.items.length > 0) {
+      return {
+        props: { data },
+      };
+    } else {
+      alert("no items");
+    }
+  } catch {
+    return { notFound: true };
+  }
 };

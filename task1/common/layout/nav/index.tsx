@@ -10,9 +10,9 @@ const NavBar = () => {
     <>
       {isOpen && <Modal setIsOpen={setIsOpen} />}
       <Nav>
-        <Link href="/" className="brand-name">
+        <Link href="/comingsoon" className="brand-name">
           <a>
-            <TextLittle500>MACROSOFT</TextLittle500>
+            <TextLittle500>METRICKS</TextLittle500>
           </a>
         </Link>
         <button
@@ -43,19 +43,31 @@ const NavBar = () => {
           <ul>
             <li>
               <Link href="/about">
-                <a>
+                <a
+                  onClick={() => {
+                    setIsNavExpanded(!isNavExpanded);
+                  }}
+                >
                   <TextLittle500 className="nav-links">ABOUT US</TextLittle500>
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>
+                <a
+                  onClick={() => {
+                    setIsNavExpanded(!isNavExpanded);
+                  }}
+                >
                   <TextLittle500 className="nav-links"> BLOG</TextLittle500>
                 </a>
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
               <Button className="button" onClick={() => setIsOpen(true)}>
                 CONTACT US
               </Button>

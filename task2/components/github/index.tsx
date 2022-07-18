@@ -13,7 +13,6 @@ const GithubContent = ({ data }: any) => {
     return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
   };
   const getCurrentDate = () => {
-    // console.log(date);
     let priorDate = new Date(new Date().setDate(today.getDate() - 30));
     let date = new Date(priorDate).toLocaleDateString("en-us", {
       year: "numeric",
@@ -27,14 +26,23 @@ const GithubContent = ({ data }: any) => {
     currentDate[1] = replacedDate[0];
     return currentDate.join("-");
   };
+
   const getMorePost = async () => {
-    const res = await fetch(
-      `https://api.github.com/search/repositories?q=created:>${getCurrentDate()}&sort=stars&order=desc&per_page=15&page=${
-        posts.length / 15 + 1
-      }`
-    );
-    const newPosts = await res.json();
-    setPosts((post: any) => [...post, ...newPosts.items]);
+    try {
+      const res = await fetch(
+        `https://api.github.com/search/repositories?q=created:>${getCurrentDate()}&sort=stars&order=desc&per_page=15&page=${
+          posts.length / 15 + 1
+        }`
+      );
+      const newPosts = await res.json();
+      if (data.items.length > 0) {
+        setPosts((post: any) => [...post, ...newPosts.items]);
+      } else {
+        alert("no items");
+      }
+    } catch {
+      return { notFound: true };
+    }
   };
 
   return (

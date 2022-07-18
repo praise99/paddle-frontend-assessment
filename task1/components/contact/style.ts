@@ -10,7 +10,7 @@ const ContactWrapper = styled.div`
 
   .title {
     margin-top: 70px;
-    font-size: 3 ${({ theme }) => theme.fontSize.text30};
+    font-size: ${({ theme }) => theme.fontSize.text24};
     text-align: center;
     margin-bottom: 40px;
   }

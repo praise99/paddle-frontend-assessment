@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fontSize } from "../../themes";
 const AboutWrapper = styled.div`
   width: 100%;
   font-family: ${({ theme }) => theme.fontFamily.Poppins};
@@ -69,7 +70,7 @@ const AboutHeader = styled.div`
   }
   .title {
     position: absolute;
-    /* text-align: center; */
+    font-size: ${({ theme }) => theme.fontSize.text40};
     left: 50%;
     right: 50%;
     width: 30%;

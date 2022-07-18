@@ -18,6 +18,7 @@ const fontSize = {
   text62: "62px",
   text18: "18px",
   text21: "21px",
+  text24: "24px",
   text47: "47px",
   text17: "17px",
   text16: "16px",

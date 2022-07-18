@@ -10,14 +10,14 @@ const Nav = styled.nav`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px 70px;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
   @media screen and (max-width: 768px) {
     padding: 40px 20px;
   }
   .brand-name {
     text-decoration: none;
-    color: black;
+    color: ${({ theme }) => theme.colors.black};
     font-size: 1.3rem;
     margin-left: 1rem;
   }
@@ -37,7 +37,7 @@ const Nav = styled.nav`
         width: 100%;
         height: calc(100vh - 77px);
         background-color: white;
-        border-top: 1px solid black;
+        border-top: 1px solid ${({ theme }) => theme.colors.black};
         z-index: 10000;
         display: none;
       }
@@ -61,7 +61,7 @@ const Nav = styled.nav`
       display: block;
       width: 100%;
       @media screen and (max-width: 768px) {
-        color: black;
+        color: ${({ theme }) => theme.colors.black};
         // increases the surface area of the anchor tag to span the full width of the menu
         width: 100%;
         padding: 1.5rem 0;
@@ -105,10 +105,10 @@ const Nav = styled.nav`
   }
   .button {
     width: 165px;
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fontSize.text14};
   }
   .nav-links {
-    font-size: 13px;
+    font-size: ${({ theme }) => theme.fontSize.text13};
   }
 `;
 export { Nav };

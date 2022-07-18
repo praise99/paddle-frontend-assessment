@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${({ theme }) => theme.fontFamily.Poppins};
   height: 100vh;
   background-image: url("bg.svg");
   background-size: cover;

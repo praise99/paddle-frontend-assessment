@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const ContactWrapper = styled.div`
   width: 100%;
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${({ theme }) => theme.fontFamily.Poppins};
   height: auto;
   background-image: url("bg.svg");
   background-size: cover;
@@ -10,7 +10,7 @@ const ContactWrapper = styled.div`
 
   .title {
     margin-top: 70px;
-    font-size: 30px;
+    font-size: 3 ${({ theme }) => theme.fontSize.text30};
     text-align: center;
     margin-bottom: 40px;
   }
@@ -40,20 +40,20 @@ const Form = styled.form`
     margin-bottom: 24px;
   }
   .name {
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fontSize.text14};
     opacity: 0.61;
   }
   input,
   textarea {
     margin-top: 14px;
-    background: #ffffff;
+    background: ${({ theme }) => theme.colors.white};
     border-radius: 15px;
     width: 100%;
     height: 60px;
     outline: none;
     padding-left: 25px;
-    font-size: 14px;
-    color: #000000;
+    font-size: ${({ theme }) => theme.fontSize.text14};
+    color: ${({ theme }) => theme.colors.black};
     /* opacity: 0.54; */
   }
   textarea {

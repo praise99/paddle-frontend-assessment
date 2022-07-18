@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${({ theme }) => theme.fontFamily.Poppins};
   height: auto;
   overflow: hidden;
   background-image: url("bg.svg");
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
     .input-text {
       height: 33px;
       letter-spacing: 0px;
-      color: #707070;
+      color: ${({ theme }) => theme.colors.gray};
       text-transform: capitalize;
       opacity: 1;
       font-size: 14px;
@@ -73,7 +73,7 @@ const Wrapper = styled.div`
     }
     button {
       background: ${({ theme }) => theme.colors.blue};
-      box-shadow: 0px 0px 10px #09090991;
+      box-shadow: 0px 0px 10px ${({ theme }) => theme.colors.grey};
       height: 67px;
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.white};
@@ -132,8 +132,12 @@ const Header = styled.header`
     right: 14%;
     top: 80px;
     background: transparent
-      linear-gradient(180deg, #213c6f 0%, transparent 100%) 0% 0% no-repeat
-      padding-box;
+      linear-gradient(
+        180deg,
+        ${({ theme }) => theme.colors.gradientTwo} 0%,
+        transparent 100%
+      )
+      0% 0% no-repeat padding-box;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     z-index: -10;
@@ -225,8 +229,12 @@ const Circle = styled.div`
     border-radius: 50%;
     background-color: red;
     background: transparent
-      linear-gradient(180deg, #213c6f 0%, transparent 100%) 0% 0% no-repeat
-      padding-box;
+      linear-gradient(
+        180deg,
+        ${({ theme }) => theme.colors.gradientTwo} 0%,
+        transparent 100%
+      )
+      0% 0% no-repeat padding-box;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     display: none;
@@ -239,8 +247,8 @@ const Circle = styled.div`
     height: 490px;
     width: 85%;
     border-radius: 3800px 3800px 0 0;
-    background: #201537;
-    border: 1px solid #625960;
+    background: ${({ theme }) => theme.colors.darkBlueShade};
+    border: 1px solid ${({ theme }) => theme.colors.gradientOne};
     @media screen and (max-width: 1000px) {
       width: 100%;
     }

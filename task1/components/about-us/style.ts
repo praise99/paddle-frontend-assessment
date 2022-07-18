@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const AboutWrapper = styled.div`
   width: 100%;
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${({ theme }) => theme.fontFamily.Poppins};
   height: 100%;
   overflow: hidden;
   background-image: url("bg.svg");
@@ -54,9 +54,9 @@ const AboutHeader = styled.div`
   .line {
     width: 60px;
     height: 1.5px;
-    border: 1px solid #ffffff;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    border: 1px solid #ffffff;
+    border: 1px solid ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.white} 0% 0% no-repeat padding-box;
+    border: 1px solid ${({ theme }) => theme.colors.white};
     margin-right: 10px;
   }
   .right-desc {
@@ -169,9 +169,9 @@ const Section = styled.div`
   .line {
     width: 60px;
     height: 1.5px;
-    border: 1px solid #ffffff;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    border: 1px solid #ffffff;
+    border: 1px solid ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.white} 0% 0% no-repeat padding-box;
+    border: 1px solid ${({ theme }) => theme.colors.white};
     margin-right: 10px;
   }
 `;
@@ -222,10 +222,10 @@ const Circle = styled.div`
   margin-bottom: 30px;
   .circle {
     /* width: 85%;
-    border: 2px solid #625960;
+    border: 2px solid  ${({ theme }) => theme.colors.gradientOne};
     height: 900px;
     border-radius: 50%;
-    background: #201537; */
+    background:  ${({ theme }) => theme.colors.darkBlueShade}; */
     width: 100%;
     display: flex;
     align-items: center;

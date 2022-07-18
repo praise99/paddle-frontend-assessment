@@ -10,6 +10,9 @@ const colors = {
   blue: "#271AC1",
   grey: "#09090991",
   lightWhite: "#EAE8EC",
+  darkBlueShade: "#201537",
+  gradientOne: "#625960",
+  gradientTwo: "#213c6f",
 };
 const fontSize = {
   text62: "62px",
@@ -20,7 +23,9 @@ const fontSize = {
   text16: "16px",
   text20: "20px",
   text14: "14px",
+  text13: "13px",
   text40: "40px",
+  text30: "30px",
 };
 const responsive = {
   verySmall: "320px",
@@ -34,8 +39,7 @@ const responsive = {
 };
 
 const fontFamily = {
-  inter: "Inter, sans-serif",
-  poppins: "Poppins, sans-serif",
+  Poppins: "Poppins, sans-serif",
 };
 
 export { colors, fontSize, responsive, fontFamily };
